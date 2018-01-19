@@ -1,0 +1,16 @@
+config SECURITY_MODFGAC
+	bool "mod_FGAC Security Module"
+	depends on SECURITY
+	default n
+	help
+	  This selects the mod_FGAC Security Module.
+	  mod_FGAC adds fine grained access control to the Kernel.
+
+config SECURITY_MODFGAC_NETFILTER
+	bool "mod_FGAC's Netfilter extension."
+	depends on SECURITY
+	depends on SECURITY_MODFGAC
+	depends on NETFILTER
+	default y
+	help
+	  This enables mod_FGAC to register Netfilter hooks, if any.

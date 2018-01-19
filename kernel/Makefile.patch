@@ -1,0 +1,22 @@
+*** __orig/Makefile	2017-11-12 19:46:13.000000000 +0100
+--- Makefile	2017-11-17 07:17:49.147371739 +0100
+***************
+*** 10,15 ****
+--- 10,16 ----
+  subdir-$(CONFIG_SECURITY_APPARMOR)	+= apparmor
+  subdir-$(CONFIG_SECURITY_YAMA)		+= yama
+  subdir-$(CONFIG_SECURITY_LOADPIN)	+= loadpin
++ subdir-$(CONFIG_SECURITY_MODFGAC)	+= mod_fgac
+  
+  # always enable default capabilities
+  obj-y					+= commoncap.o
+***************
+*** 25,30 ****
+--- 26,32 ----
+  obj-$(CONFIG_SECURITY_APPARMOR)		+= apparmor/
+  obj-$(CONFIG_SECURITY_YAMA)		+= yama/
+  obj-$(CONFIG_SECURITY_LOADPIN)		+= loadpin/
++ obj-$(CONFIG_SECURITY_MODFGAC)		+= mod_fgac/
+  obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
+  
+  # Object integrity file lists
